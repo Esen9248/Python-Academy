@@ -3,9 +3,9 @@ def pow(fn):
 		if y == 0:
 			print('Error')
 		else: 
-			return x / y
+			 return fn(x,y)
 	return wrapper 
 
 @pow
 def div(x, y): return x / y
-print(div(4,0))
+print(div(4,4))
