@@ -12,8 +12,11 @@ def triangle_area(a,h):
 
 def square_equation(a,b,c):
 	d = (b**2)-(4*a*c)
-	if d <= 0:
+	if d < 0:
 		return 'Error'
+	elif d == 0:
+		x = -b/(2*a)
+		return 'x=', x
 	else:
 		x1 = (-b + sqrt(d)) / (2*a)	
 		x2 = (-b - sqrt(d)) / (2*a)	
@@ -21,4 +24,4 @@ def square_equation(a,b,c):
 
 def cube_addition(a,b):
 	# (a+b)^2 =  a^3 + 3a^2b + 3ab^2 + b^3
-	return '(a+b)^2=', a^3 + (3*a^2*b) + (3*a*b^2) + b^3
+	return '(a+b)^2=', a**3 + (3*(a**2)*b) + (3*a*(b**2) + b**3
