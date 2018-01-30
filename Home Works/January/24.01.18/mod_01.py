@@ -2,7 +2,8 @@ from math import sqrt
 Pi = 3.14
 
 def square_area(a):
-	return 'S(square)=', a**2
+	c = a**2 # right finctional programming
+	return 'S(square)=', c
 
 def circle_area(r):
 	return 'S(circle)=', Pi*(r**2)
