@@ -8,7 +8,7 @@ class Geometry(object):
 		S = a**2
 		return S
 	def perimeter_tr(self, a, b, c):
-		P = a*b*c
+		P = a+b+c
 		return P
 	def area_tr(self, a, h):
 		S = (a/2)*h
