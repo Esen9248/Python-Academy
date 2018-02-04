@@ -19,3 +19,4 @@ class A(object):
 class B(A):
 	def print_protected_attr(self):
 		print(self._protected_attr)
+		

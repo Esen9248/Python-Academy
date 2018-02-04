@@ -50,13 +50,13 @@ if __name__ == '__main__':
 	a_tr, b_tr, c_tr, h_tr = [int(i) for i in input('Enter three sides and a height of triangle: ').split()]
 	r_cr = int(input('Enter a radius of circle: '))
 
-	Pryamougolnik = Rectangle(a_rc, b_rc)
-	Kvadrat = Square(square_length)
-	Treugolnik = Triangle(a_tr, b_tr, c_tr, h_tr)
-	Krug = Circle(r_cr)
+	rectangle = Rectangle(a_rc, b_rc)
+	square = Square(square_length)
+	triangle = Triangle(a_tr, b_tr, c_tr, h_tr)
+	circle = Circle(r_cr)
 
 	print('')
-	print('Perimeter of rectangle is {}, area of rectangle is {}'.format(Pryamougolnik.perimeter(), Pryamougolnik.area()))
-	print('Perimeter of square is {}, area of square is {}'.format(Kvadrat.perimeter(), Kvadrat.area()))
-	print('Perimeter of triangle is {}, area of triangle is {}'.format(Treugolnik.perimeter(), Treugolnik.area()))
-	print('Perimeter of circle is {}, area of circle is {}'.format(Krug.perimeter(), Krug.area()))
+	print('Perimeter of rectangle is {}, area of rectangle is {}'.format(rectangle.perimeter(), rectangle.area()))
+	print('Perimeter of square is {}, area of square is {}'.format(square.perimeter(), square.area()))
+	print('Perimeter of triangle is {}, area of triangle is {}'.format(triangle.perimeter(), triangle.area()))
+	print('Perimeter of circle is {}, area of circle is {}'.format(circle.perimeter(), circle.area()))

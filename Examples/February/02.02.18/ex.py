@@ -9,3 +9,4 @@ if __name__ == '__main__':
 	b.print_protected_attr()
 	# a.__private_method() - 'A' object has no attribute '__private_method'
 	# print('private', a.__private_attr) #- 'A' object has no attribute '__private_attr'
+	
