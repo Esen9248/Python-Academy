@@ -8,7 +8,6 @@ CREATE TABLE `writers`(
 	`id` INT AUTO_INCREMENT NOT NULL,
 	`name` VARCHAR(255) NOT NULL,
 	PRIMARY KEY(`id`),
-
 ) ENGINE=InnoDB;
 
 CREATE TABLE `books`(
@@ -77,4 +76,4 @@ LEFT JOIN books_genres
 RIGHT JOIN genres 
 	ON genres.id=books_genres.genre_id
 # выборка
-WHERE  books_genres.genre_id= 1;
+WHERE  books_genres.genre_id=1;
