@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contents %}
+<form method='POST'>
+    {% csrf_token %}
+    {{ create_car_form.as_p }}
+    <input type='submit' value='Save'/>
+</form>
+{% endblock contents %}
+
+
+{% block title %}
+  Demo-Form Create
+{% endblock %}
+
+{% block page_name %}
+  <h2>Form Create example</h2>
+{% endblock page_name %}

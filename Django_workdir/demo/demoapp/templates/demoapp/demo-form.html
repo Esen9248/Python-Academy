@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contents %}
+<form method='GET'>
+    {{ cars_form.as_p }}
+    <input type='submit' value='search'/>
+</form>
+<ul>
+{% for i in cars %}
+<li>{{ i.name }}</a></li>
+{% empty %}
+<p>Empty result</p>
+{% endfor %}
+</ul>
+{% endblock contents %}
+
+
+{% block title %}
+  Demo-Form
+{% endblock %}
+
+{% block page_name %}
+  <h2>Form example</h2>
+{% endblock page_name %}
+

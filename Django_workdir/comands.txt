@@ -1,0 +1,41 @@
+which python3.6 
+
+sudo apt-get virtualenv
+
+source ~/Desktop/Python/Django_workdir/env/bin/activate - запустить среду
+
+deactivate
+
+pip install Django
+
+pip freeze
+
+django-admin.py startproject projectname
+
+python manage.py startapp demoapp
+
+python manage.py migrate
+
+python manage.py runserver
+
+http://localhost:8000/
+
+fuser -k 8000/tcp #сбить сервер
+
+pip install Mysql-Python
+
+mysql -u -root -p
+
+./manage.py migrate
+
+./manage.py makemigrations
+
+./manage.py createsuperuser
+
+Username: esen
+Password: esenrealmadrid
+
+timezone.now().time().microsecond
+
+./manage.py shell
+

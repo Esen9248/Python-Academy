@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contents %}
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+
+  <h1>My Cars from database:</h1>
+  <ul>
+  {% for i in cars %}
+  <li><a href='{% url 'car-id' i.id %}'>{{ i.name }} </a></li>
+  {% empty %}
+  <p>Empty result</p>
+  {% endfor %}
+  </ul>
+{% endblock contents %}
+
+
+{% block title %}
+  Page 2
+{% endblock %}
+
+{% block page_name %}
+  <h2>Example 2</h2>
+{% endblock page_name %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'demoapp/styles/stylefor2.css' %}"/>
+{% endblock css %}

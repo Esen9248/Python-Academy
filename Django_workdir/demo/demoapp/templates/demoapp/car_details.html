@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+  
+
+
+{% block page_name %}
+  <h2>{{ cars.name }}</h2>
+{% endblock page_name %}
+
+{% block contents %}
+<div>
+<p><b>id</b> - {{ cars.id }}</p>
+<p><b>name</b> - {{ cars.name }}</p>
+<p><b>brand</b> - {{ cars.brand }}</p>
+<p><b>color</b> - {% for color in cars.color.all %} 
+     {% if color == cars.color.last %} {{ color.name }}
+     {% else %}
+      {{color.name}},
+     {% endif %} 
+     {% endfor %}</p>
+<p><b>year</b> - {{ cars.year }}</p>
+</div>
+<div>
+  <a href='{% url 'demo-page2' %}'><button>Назад</button></a>
+</div>
+{% endblock contents %}

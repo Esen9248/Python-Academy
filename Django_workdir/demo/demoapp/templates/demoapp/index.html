@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+  
+{% block css %}
+<link rel="stylesheet" href="{% static 'demoapp/styles/stylefor1.css' %}" />
+{% endblock %}
+
+{% block page_name %}
+  <h2>Page {{ page_name }}</h2>
+{% endblock page_name %}
+
+{% block contents %}
+  <a href="{% static 'demoapp/images/sergioramos.jpg' %}" target="_blank"><img src="{% static 'demoapp/images/sergioramos.jpg' %}" alt="background-image" class="image" /></a>
+  <ul>
+    {% for s in students %}
+    <li>{{ s.name }}</li>
+    {% empty %}  <!-- если в FOR ничего нет -->
+    <p>No Students in database</p>
+    {% endfor %}
+  </ul>
+{% endblock contents %}
