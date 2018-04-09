@@ -1,0 +1,15 @@
+.page_name{
+    margin-left: 50px;
+}
+a{
+    text-decoration: none;
+    margin-left: 60px;
+    color: #000;
+}
+
+.empty{
+    color: #d80000;
+}
+.page_name{
+    color: #000;
+}

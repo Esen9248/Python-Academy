@@ -24,7 +24,7 @@ fuser -k 8000/tcp #сбить сервер
 
 pip install Mysql-Python
 
-mysql -u -root -p
+mysql -u root -p
 
 ./manage.py migrate
 

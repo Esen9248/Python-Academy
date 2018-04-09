@@ -1,0 +1,22 @@
+.created_at{
+    font-size: 1rem;
+    color: #777;
+}
+.author{
+    text-align: right;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+.category{
+    text-align: right;
+}
+.div_page_name{
+    display: flex;
+    justify-content: space-between;
+}
+.back_btn{
+    color: #000;
+}
+body{
+    color: #000;
+} 

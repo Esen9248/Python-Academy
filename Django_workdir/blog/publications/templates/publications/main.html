@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Blog
+{% endblock %}
+{% block page_name %}
+<h2 class ='page_name'>Publications:</h2>
+{% endblock %}
+
+{% block contents %}
+<form method='GET'>
+        {{ post_form.as_p }}
+        <input type='submit' value='search' placeholder="Category"/>
+    </form>
+{% for i in post %}
+    <p><a href='{% url 'post-details' i.slug %}'>{{ i.name }}</a></p>
+{% empty %}
+    <p class='empty'>There is no posts in that category</p>
+{% endfor %}
+
+{{ count }}
+
+{% endblock %}
+
+{% block css %}
+<link rel='stylesheet' href="{% static 'css/main.css' %}"/>
+{% endblock %}

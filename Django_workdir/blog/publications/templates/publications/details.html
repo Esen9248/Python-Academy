@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Blog
+{% endblock %}
+{% block page_name %}
+<div class="div_page_name">
+</h2> 
+    <h2 class='page_name'>{{  post.name }}
+    <span class='created_at'>{{ post.created_at }}</span>
+     <a href="{% url 'pub_page' %}" class="back_btn"><button>Назад</button></a>
+</div>
+{% endblock %}
+
+{% block contents %} 
+<p class = 'author'>{{ post.author }}</p>
+<p class='category'><em>{% for i in post.category.all %} 
+    {% if i == post.category.last %} {{ i.name }}
+    {% else %}
+     {{i.name}},
+    {% endif %} 
+    {% endfor %}</em></p>
+<p>{{ post.content }}</p>
+<img src="{{ MEDIA_URL }}{{ post.image }}" />
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/details.css' %}"/>
+{% endblock %}

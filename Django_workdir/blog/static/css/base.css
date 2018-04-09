@@ -1,0 +1,19 @@
+body{
+    margin-left: 200px;
+    margin-right:200px;
+    margin-top: 50px;
+    /* color: #fff; */
+    background: url('../images/footer_lodyas.png') center center repeat;  
+}
+img{
+    width: 400px;
+    height: 300px;
+}
+footer{
+    color: #000;
+    margin-top: 50px;
+}
+
+.blog_title{
+    color: #000;
+}
